@@ -6,6 +6,8 @@ node('master') {
 
         // Start services (Let docker-compose build containers for testing)
         sh "whoami"
+        sh "docker-compose ps"
+        sh "ls -lah"
         sh "./develop up -d"
 
         // Get composer dependencies
