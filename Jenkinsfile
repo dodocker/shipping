@@ -5,6 +5,7 @@ node('master') {
         git url: 'git@github.com:dodocker/shipping.git'
 
         // Start services (Let docker-compose build containers for testing)
+        sh "whoami"
         sh "./develop up -d"
 
         // Get composer dependencies
