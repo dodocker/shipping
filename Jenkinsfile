@@ -6,6 +6,7 @@ node('master') {
 
         // Start services (Let docker-compose build containers for testing)
         sh "whoami"
+        sh "chmod +x develop"
         sh "ls -lah"
         sh "./develop up -d"
 
